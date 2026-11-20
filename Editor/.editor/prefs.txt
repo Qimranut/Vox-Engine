@@ -1,0 +1,11 @@
+panel.hierarchy = true
+panel.inspector = true
+panel.content = true
+panel.resources = true
+panel.viewport = true
+panel.console = true
+panel.profiler = true
+panel.terrain = true
+panel.pipeline = true
+performance.limitFrameRate = false
+performance.idleThrottle = true

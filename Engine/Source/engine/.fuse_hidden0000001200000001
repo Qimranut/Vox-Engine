@@ -1,0 +1,283 @@
+#include <vox/engine.hpp>
+
+// Engine components - these moved out of engine.hpp so that the public
+// header exposes no third-party type. See Include/vox/engine.hpp.
+#include "../platform/platform_sys.hpp"
+#include "../window/sys/win_sys.hpp"
+#include "../events/bus.hpp"
+#include "../input/sys/input_sys.hpp"
+#include "../lua/interface/lua_interface.hpp"
+#include "../ecs/ecs_manager/ecs_mng.hpp"
+#include "../graphics/sys/gph_sys.hpp"
+#include "../physics/sys/phy_sys.hpp"
+#include "../audio/sys/audio_sys.hpp"
+#include "../scheduler/scheduler.hpp"
+#include "../editor/sys/editor_sys.hpp"
+
+// Component registry
+#include "../components/registry/comp_registry.hpp"
+
+// Input keys
+#include "../input/definitions/input_def.hpp"
+
+// stds
+#include <iostream>
+
+
+namespace engine
+{
+	VoxEngine::~VoxEngine()
+	{
+		shutdown();
+	}
+
+	void VoxEngine::setup()
+	{
+		sysStartup();
+
+		dataSetup();
+
+		eventSetup();
+
+		audioInit();
+		graphicsInit();
+		physicsInit();
+
+		schedulerSetup();
+
+		scriptingSetup();
+
+		testCode();
+
+		run();
+	}
+	
+	void VoxEngine::run()
+	{
+		double t{};
+		double dt{ 0.01 };
+
+		double curTime = glfwGetTime();
+		double accumulator{};
+
+		running_ = true;
+		while (running_)
+		{
+			glfwPollEvents();
+
+			for (auto& w : win_->windows())
+			{
+				if (glfwWindowShouldClose(w))
+				{
+					running_ = false;
+					break;
+				}
+			}
+
+			double newTime = glfwGetTime();
+			double frameTime = newTime - curTime;
+
+			if (frameTime > 0.25)
+				frameTime = 0.25;
+
+			curTime = newTime;
+
+			accumulator += frameTime;
+
+			// Fixed timestep
+			while (accumulator >= dt)
+			{
+				update(dt);
+
+				t += dt;
+				accumulator -= dt;
+			}
+
+			// Per-frame update goes here
+			
+			// Invoke scripts
+			luaInterface_->invokeScript("test.lua");
+
+			//// Physics
+			//phys_->update(dt);
+
+			//// Audio
+			//audio_->update(dt);
+
+			//// Graphics
+			//gph_->update(dt);
+				
+			scheduler_->runFrame(dt);
+
+			// Reset input state
+			input_->endFrame();
+		}
+
+		shutdown();
+	}
+	
+	void VoxEngine::update(double dt)
+	{
+	}
+
+	void VoxEngine::shutdown()
+	{
+		win_->shutdown();
+		phys_->shutdown();
+		audio_->shutdown();
+
+		running_ = false;
+	}
+
+	void VoxEngine::sysStartup()
+	{
+		platform_				= std::make_unique<platform::System>();
+		bus_					= std::make_unique<events::Bus>();
+		win_					= std::make_unique<window::System>(*bus_);
+		input_					= std::make_unique<input::System>(*bus_);
+		luaInterface_			= std::make_unique<scripting::lua::Interface>();
+		ecs_					= std::make_unique<ecs::ECSManager>();
+		gph_					= std::make_unique<graphics::System>();
+		phys_					= std::make_unique<physics::System>();
+		audio_					= std::make_unique<audio::System>();
+		editor_					= std::make_unique<editor::System>(*ecs_);
+
+		scheduler_				= std::make_unique<scheduler::Scheduler>();
+		physicsWorker_			= std::make_unique<scheduler::SystemWorker>(phys_.get());
+		audioWorker_			= std::make_unique<scheduler::SystemWorker>(audio_.get());
+		graphicsWorker_			= std::make_unique<scheduler::SystemWorker>(gph_.get());
+	}
+	
+	void VoxEngine::dataSetup()
+	{
+		ecs_->registerArchetypes();
+	}
+
+	void VoxEngine::audioInit()
+	{
+		audio_->init();
+	}
+
+	void VoxEngine::graphicsInit()
+	{
+		// Window
+		bool result = win_->createWindow();
+		if (!result)
+			throw std::runtime_error("Failed to create the window");
+	}
+
+	void VoxEngine::physicsInit()
+	{
+		phys_->init();
+	}
+
+	void VoxEngine::schedulerSetup()
+	{
+		scheduler_->registerSys(physicsWorker_.get(), {});
+		scheduler_->registerSys(audioWorker_.get(), {});
+		scheduler_->registerSys(graphicsWorker_.get(), {physicsWorker_.get()});
+	}
+
+	void VoxEngine::eventSetup()
+	{
+		input_->subscriptionSetup();
+	}
+
+	void VoxEngine::scriptingSetup()
+	{
+		luaInterface_->init();
+
+		scriptingAPISetup();
+	}
+
+	void VoxEngine::scriptingAPISetup()
+	{
+		// ------------------ Input API ------------------
+
+		// Key
+
+		sol::table keyTable = luaInterface_->createTable("Key");
+#define X(name, key) keyTable[#name] = input::keys::KeyCode::name;
+		KEYS
+#undef X
+
+		// Input Functions
+
+		// isKeyDown
+		luaInterface_->link(
+			"Input",
+			"IsKeyDown",
+			[this](int key)
+			{
+				return input_->isKeyDown(key);
+			});
+
+		// isKeyPressed
+		luaInterface_->link(
+			"Input",
+			"IsKeyPressed",
+			[this](int key)
+			{
+				return input_->isKeyPressed(key);
+			});
+
+		// isKeyReleased
+		luaInterface_->link(
+			"Input",
+			"IsKeyReleased",
+			[this](int key)
+			{
+				return input_->isKeyReleased(key);
+			});
+
+		// ------------------- ECS API -------------------
+
+		luaInterface_->linkOverload(
+			"Node",
+			"Create",
+
+			// Create Empty Node
+			[this]()
+			{
+				return editor_->createNode();
+			},
+
+			// Create Node with an archetype
+			[this](const std::string& archetypeName)
+			{
+				return editor_->createNode(archetypeName);
+			});
+
+		luaInterface_->linkOverload(
+			"Node",
+			"Create",
+
+			// Create Empty Node
+			[this]()
+			{
+				return editor_->createNode();
+			},
+
+			// Create Node with an archetype
+			[this](const std::string& archetypeName)
+			{
+				return editor_->createNode(archetypeName);
+			});
+	}
+
+	void VoxEngine::testCode()
+	{
+		// Lua OnCreate / OnUpdate / OnDestroy
+		std::cout << "---Testing---" << std::endl;
+		luaInterface_->createScript("New_Lua_Script");
+
+		luaInterface_->reload();
+
+		luaInterface_->invokeGlobal("OnCreate");
+		//luaInterface_->invokeGlobal("OnUpdate");
+		//luaInterface_->invokeGlobal("OnDestroy");
+
+		// Lua Exposed vars
+		luaInterface_->retrieveVars();
+	}
+}

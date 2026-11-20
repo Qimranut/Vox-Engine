@@ -1,0 +1,9 @@
+VOXSCENE 6
+"Main Menu Layout"
+ASSETS 1
+"textures/MainMenuBG.png"
+WORLD ""
+MODE 2
+OBJECTS 2
+1 "Object" 1 1 1 -0.972969294 0.0908011273 0 0 -0 0 16 9 0.00999999978 "" "textures/MainMenuBG.png" 0 "" 1 1 0 0 0 "fonts/Barlow-Regular.ttf" "New text" 1 32 24 24 1 1 1 1 0
+2 "Object" 1 1 1 -6.99761248 2.10486388 6.48770428 0 -0 0 2 2 1 "" "textures/Logo.png" 0 "" 1 1 0 0 0 "fonts/Barlow-Regular.ttf" "New text" 1 32 24 24 1 1 1 1 0

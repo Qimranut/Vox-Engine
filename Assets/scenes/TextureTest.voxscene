@@ -1,0 +1,8 @@
+VOXSCENE 1
+"Texture Test"
+ASSETS 0
+OBJECTS 4
+1 "Textured cube" 1 0 1.5 0 0 0 0 2 2 2 "" "textures/uv_test.tga"
+2 "Textured cube, turned 45" 1 3 1 0 0 45 0 1 1 1 "" "textures/uv_test.tga"
+3 "Textured cube, tipped 30" 1 -3 1 0 30 0 0 1 1 1 "" "textures/uv_test.tga"
+4 "Untextured cube" 1 6 1 0 0 0 0 1 1 1 "" ""

@@ -1,0 +1,12 @@
+{
+  "radius": [64, 128, 192, 256],
+  "hysteresis": 16,
+  "colliderRadius": 48,
+  "poolBudgetMiB": 512,
+  "editStoreMiB": 64,
+  "tileCacheTiles": 40,
+  "workers": 0,
+  "installJobs": 512,
+  "installJobsWhileEditing": 96,
+  "quadArenaMiB": 192
+}

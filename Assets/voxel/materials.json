@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "materials": [
+    { "name": "air",   "colour": [0, 0, 0],       "lodPriority": 0, "friction": 0.0, "opaque": false },
+    { "name": "stone", "colour": [128, 128, 132], "lodPriority": 1, "friction": 0.7, "yields": "stone" },
+    { "name": "dirt",  "colour": [121, 85, 58],   "lodPriority": 2, "friction": 0.6 },
+    { "name": "grass", "colour": [86, 152, 61],   "lodPriority": 3, "friction": 0.6 },
+    { "name": "sand",  "colour": [214, 196, 140], "lodPriority": 4, "friction": 0.5 },
+    { "name": "snow",  "colour": [238, 242, 246], "lodPriority": 6, "friction": 0.35 },
+    { "name": "water", "colour": [64, 140, 200],  "lodPriority": 5, "friction": 0.4, "yields": "water" },
+    { "name": "ice",       "colour": [176, 212, 232], "lodPriority": 5, "friction": 0.1 },
+    { "name": "sandstone", "colour": [201, 152, 98],  "lodPriority": 2, "friction": 0.65, "yields": "stone" },
+    { "name": "redrock",   "colour": [158, 84, 58],   "lodPriority": 1, "friction": 0.7, "yields": "stone" },
+    { "name": "mud",       "colour": [92, 74, 52],    "lodPriority": 3, "friction": 0.45 }
+  ]
+}

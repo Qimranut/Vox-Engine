@@ -1,0 +1,245 @@
+{
+  "version": 3,
+  "seed": 248347279368303,
+  "voxelSize": 0.1,
+  "size": {
+    "x": 1000,
+    "y": 512,
+    "z": 1000
+  },
+  "origin": [
+    3.9,
+    -4.4,
+    0.0
+  ],
+  "biomes": {
+    "size": 93.0,
+    "blending": 0.194,
+    "datumHeight": 14.08,
+    "reliefScale": 1.0,
+    "shellDepth": 8.0,
+    "entries": [
+      {
+        "name": "dunes",
+        "colour": [
+          222,
+          200,
+          140
+        ],
+        "featureSize": 30.0,
+        "base": 1.0,
+        "edgeRelief": 0.6,
+        "erodibility": 0.03,
+        "talusDeg": 34.0,
+        "layers": [
+          {
+            "op": "fbm",
+            "wavelength": 80.0,
+            "amplitude": 2.0,
+            "octaves": 3,
+            "lacunarity": 2.0,
+            "gain": 0.5
+          },
+          {
+            "op": "dunes",
+            "wavelength": 14.0,
+            "amplitude": 2.8,
+            "octaves": 4,
+            "lacunarity": 2.0,
+            "gain": 0.5,
+            "asymmetry": 0.72,
+            "windDeg": 25.0,
+            "warp": {
+              "wavelength": 40.0,
+              "amplitude": 9.0
+            },
+            "mask": {
+              "wavelength": 50.0,
+              "floor": 0.35
+            }
+          },
+          {
+            "op": "dunes",
+            "wavelength": 5.0,
+            "amplitude": 0.35,
+            "octaves": 4,
+            "lacunarity": 2.0,
+            "gain": 0.5,
+            "asymmetry": 0.65,
+            "windDeg": 40.0,
+            "warp": {
+              "wavelength": 15.0,
+              "amplitude": 2.0
+            }
+          }
+        ],
+        "palette": {
+          "top": "sand",
+          "under": "sand",
+          "rock": "sandstone",
+          "sand": "sand",
+          "snow": "snow"
+        },
+        "rules": {
+          "soilDepth": 2.5,
+          "grassMaxSlopeDeg": 50.0,
+          "rockSlopeDeg": 62.0,
+          "snowline": 1000.0,
+          "snowMaxSlopeDeg": 40.0,
+          "snowDepth": 0.3,
+          "sandDeposit": 0.15,
+          "sandDepth": 0.6
+        }
+      },
+      {
+        "name": "canyons",
+        "colour": [
+          186,
+          110,
+          70
+        ],
+        "featureSize": 80.0,
+        "base": 1.0,
+        "edgeRelief": 0.3,
+        "erodibility": 0.2,
+        "talusDeg": 80.0,
+        "layers": [
+          {
+            "op": "plateau",
+            "wavelength": 50.0,
+            "amplitude": 14.0,
+            "octaves": 2,
+            "lacunarity": 2.0,
+            "gain": 0.5,
+            "high": 0.3,
+            "low": 0.1,
+            "warp": {
+              "wavelength": 70.0,
+              "amplitude": 12.0
+            }
+          },
+          {
+            "op": "fbm",
+            "wavelength": 25.0,
+            "amplitude": 1.2,
+            "octaves": 3,
+            "lacunarity": 2.0,
+            "gain": 0.5
+          }
+        ],
+        "terrace": {
+          "step": 3.5,
+          "sharpness": 6.0,
+          "slack": 0.15
+        },
+        "palette": {
+          "top": "sandstone",
+          "under": "sandstone",
+          "rock": "redrock",
+          "sand": "sand",
+          "snow": "snow"
+        },
+        "strata": {
+          "wobble": 1.5,
+          "bands": [
+            {
+              "material": "redrock",
+              "thickness": 1.6
+            },
+            {
+              "material": "sandstone",
+              "thickness": 1.2
+            },
+            {
+              "material": "redrock",
+              "thickness": 2.0
+            },
+            {
+              "material": "stone",
+              "thickness": 0.8
+            }
+          ]
+        },
+        "rules": {
+          "soilDepth": 0.6,
+          "grassMaxSlopeDeg": 35.0,
+          "rockSlopeDeg": 48.0,
+          "snowline": 1000.0,
+          "snowMaxSlopeDeg": 40.0,
+          "snowDepth": 0.3,
+          "sandDeposit": 0.15,
+          "sandDepth": 0.6
+        }
+      }
+    ]
+  },
+  "erosion": {
+    "cellVoxels": 2,
+    "droplets": 400000,
+    "radius": 3,
+    "inertia": 0.08,
+    "capacity": 4.0,
+    "minCapacity": 0.01,
+    "erode": 0.3,
+    "deposit": 0.3,
+    "evaporate": 0.012,
+    "gravity": 4.0,
+    "lifetime": 48,
+    "minRelief": 25.0,
+    "thermal": {
+      "iterations": 60,
+      "rockTalusDeg": 48.0,
+      "sedimentTalusDeg": 33.0,
+      "rate": 0.25
+    }
+  },
+  "water": {
+    "enabled": true,
+    "material": "water",
+    "minDepth": 0.2,
+    "minArea": 4.0,
+    "maxDepth": 1.2,
+    "fillFraction": 0.6,
+    "maxArea": 220.0
+  },
+  "detailNoise": {
+    "wavelength": 1.6,
+    "amplitude": 0.12,
+    "octaves": 3,
+    "lacunarity": 2.0,
+    "gain": 0.5,
+    "fullSlopeDeg": 30.0
+  },
+  "surface": {
+    "top": "grass",
+    "under": "dirt",
+    "base": "stone",
+    "sand": "sand",
+    "snow": "snow",
+    "soilDepth": 1.2,
+    "grassMaxSlopeDeg": 33.0,
+    "rockSlopeDeg": 44.0,
+    "slopeJitterDeg": 4.0,
+    "jitterWavelength": 6.0,
+    "slopeReach": 0.4,
+    "snowline": 30.0,
+    "snowJitter": 2.5,
+    "snowMaxSlopeDeg": 40.0,
+    "snowDepth": 0.3,
+    "sandDeposit": 0.15,
+    "sandMaxHeight": 17.08,
+    "shoreBand": 0.5,
+    "shoreReach": 0.8,
+    "sandDepth": 0.6
+  },
+  "caves": {
+    "enabled": false,
+    "frequency": 0.01,
+    "octaves": 4,
+    "lacunarity": 2.0,
+    "gain": 0.5,
+    "threshold": 0.58,
+    "minDepthBelowSurface": 30,
+    "minY": 8
+  }
+}

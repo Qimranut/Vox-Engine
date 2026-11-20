@@ -1,0 +1,12 @@
+VOXSCENE 6
+"Arena 01"
+ASSETS 0
+WORLD "maps/Arena01.voxmap"
+MODE 3
+OBJECTS 6
+1 "Object" 1 1 1 -1.49011612e-08 7.4505806e-09 0 0 -0 0 9.21867275 1 1 "" "" 0 "" 1 1 0 0 0 "fonts/Barlow-Regular.ttf" "New text" 1 32 24 24 1 1 1 1 0
+2 "Object" 1 1 1 0 0 0 0 -0 0 1 1 1 "" "" 0 "" 1 1 0 0 0 "fonts/Barlow-Regular.ttf" "New text" 1 32 24 24 1 1 1 1 0
+3 "Object" 1 1 1 0 0 0 0 -0 0 1 1 1 "" "" 0 "" 1 1 0 0 0 "fonts/Barlow-Regular.ttf" "New text" 1 32 24 24 1 1 1 1 0
+4 "Object" 1 1 1 0 0 0 0 -0 0 1 1 1 "" "" 0 "" 1 1 0 0 0 "fonts/Barlow-Regular.ttf" "New text" 1 32 24 24 1 1 1 1 0
+5 "Object" 1 1 1 0 0 0 0 -0 0 1 1 1 "" "" 0 "" 1 1 0 0 0 "fonts/Barlow-Regular.ttf" "New text" 1 32 24 24 1 1 1 1 0
+6 "Object" 1 1 1 0 0 0 0 -0 0 1 1 1 "" "" 0 "" 1 1 0 0 0 "fonts/Barlow-Regular.ttf" "New text" 1 32 24 24 1 1 1 1 0

@@ -1,0 +1,195 @@
+{
+  "version": 3,
+  "seed": 83664712742000,
+  "voxelSize": 0.1,
+  "size": {
+    "x": 1000,
+    "y": 512,
+    "z": 1000
+  },
+  "origin": [
+    3.9,
+    -4.4,
+    0.0
+  ],
+  "biomes": {
+    "size": 40.0,
+    "blending": 0.3,
+    "datumHeight": 14.39,
+    "reliefScale": 1.0,
+    "shellDepth": 8.0,
+    "entries": [
+      {
+        "name": "mountains",
+        "colour": [
+          130,
+          130,
+          140
+        ],
+        "featureSize": 120.0,
+        "base": 5.0,
+        "edgeRelief": 0.15,
+        "erodibility": 1.0,
+        "talusDeg": 50.0,
+        "layers": [
+          {
+            "op": "ridged",
+            "wavelength": 70.0,
+            "amplitude": 30.0,
+            "octaves": 4,
+            "lacunarity": 2.0,
+            "gain": 0.5,
+            "floor": 0.3,
+            "warp": {
+              "wavelength": 60.0,
+              "amplitude": 9.0
+            }
+          },
+          {
+            "op": "damped",
+            "wavelength": 30.0,
+            "amplitude": 5.0,
+            "octaves": 5,
+            "lacunarity": 1.98,
+            "gain": 0.49,
+            "damping": 0.35
+          }
+        ],
+        "palette": {
+          "top": "grass",
+          "under": "dirt",
+          "rock": "stone",
+          "sand": "sand",
+          "snow": "snow"
+        },
+        "rules": {
+          "soilDepth": 1.0,
+          "grassMaxSlopeDeg": 33.0,
+          "rockSlopeDeg": 44.0,
+          "snowline": 22.0,
+          "snowMaxSlopeDeg": 40.0,
+          "snowDepth": 0.3,
+          "sandDeposit": 0.4,
+          "sandDepth": 0.6
+        }
+      },
+      {
+        "name": "plains",
+        "colour": [
+          140,
+          190,
+          90
+        ],
+        "featureSize": 0.0,
+        "base": 0.0,
+        "edgeRelief": 1.0,
+        "erodibility": 0.25,
+        "talusDeg": 45.0,
+        "layers": [
+          {
+            "op": "fbm",
+            "wavelength": 60.0,
+            "amplitude": 1.5,
+            "octaves": 3,
+            "lacunarity": 2.0,
+            "gain": 0.5
+          },
+          {
+            "op": "billow",
+            "wavelength": 18.0,
+            "amplitude": 0.4,
+            "octaves": 2,
+            "lacunarity": 2.0,
+            "gain": 0.5
+          }
+        ],
+        "palette": {
+          "top": "grass",
+          "under": "dirt",
+          "rock": "stone",
+          "sand": "sand",
+          "snow": "snow"
+        },
+        "rules": {
+          "soilDepth": 1.5,
+          "grassMaxSlopeDeg": 33.0,
+          "rockSlopeDeg": 44.0,
+          "snowline": 1000.0,
+          "snowMaxSlopeDeg": 40.0,
+          "snowDepth": 0.3,
+          "sandDeposit": 0.4,
+          "sandDepth": 0.6
+        }
+      }
+    ]
+  },
+  "erosion": {
+    "cellVoxels": 2,
+    "droplets": 400000,
+    "radius": 3,
+    "inertia": 0.08,
+    "capacity": 4.0,
+    "minCapacity": 0.01,
+    "erode": 0.3,
+    "deposit": 0.3,
+    "evaporate": 0.012,
+    "gravity": 4.0,
+    "lifetime": 48,
+    "minRelief": 25.0,
+    "thermal": {
+      "iterations": 60,
+      "rockTalusDeg": 48.0,
+      "sedimentTalusDeg": 33.0,
+      "rate": 0.25
+    }
+  },
+  "water": {
+    "enabled": true,
+    "material": "water",
+    "minDepth": 0.2,
+    "minArea": 4.0,
+    "maxDepth": 1.2,
+    "fillFraction": 0.6,
+    "maxArea": 220.0
+  },
+  "detailNoise": {
+    "wavelength": 1.6,
+    "amplitude": 0.12,
+    "octaves": 3,
+    "lacunarity": 2.0,
+    "gain": 0.5,
+    "fullSlopeDeg": 30.0
+  },
+  "surface": {
+    "top": "grass",
+    "under": "dirt",
+    "base": "stone",
+    "sand": "sand",
+    "snow": "snow",
+    "soilDepth": 1.2,
+    "grassMaxSlopeDeg": 33.0,
+    "rockSlopeDeg": 44.0,
+    "slopeJitterDeg": 4.0,
+    "jitterWavelength": 6.0,
+    "slopeReach": 0.4,
+    "snowline": 30.0,
+    "snowJitter": 2.5,
+    "snowMaxSlopeDeg": 40.0,
+    "snowDepth": 0.3,
+    "sandDeposit": 0.15,
+    "sandMaxHeight": 17.39,
+    "shoreBand": 0.5,
+    "shoreReach": 0.8,
+    "sandDepth": 0.6
+  },
+  "caves": {
+    "enabled": false,
+    "frequency": 0.01,
+    "octaves": 4,
+    "lacunarity": 2.0,
+    "gain": 0.5,
+    "threshold": 0.58,
+    "minDepthBelowSurface": 30,
+    "minY": 8
+  }
+}

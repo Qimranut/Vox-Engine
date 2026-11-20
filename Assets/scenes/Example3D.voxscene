@@ -1,0 +1,6 @@
+VOXSCENE 1
+"Example 3D"
+ASSETS 0
+OBJECTS 2
+1 "Triangle" 1 0 0 0 0 0 0 1 1 1 "models/Triangle.obj" ""
+2 "Empty object" 1 0 2 -3 0 45 0 1 1 1 "" ""

@@ -1,0 +1,110 @@
+{
+  "version": 1,
+
+  "generate": { "dropletsPerSquareMetre": 40, "shellDepth": 8.0 },
+
+  "defaults": {
+    "erosion": {
+      "cellVoxels": 2, "radius": 3, "inertia": 0.08,
+      "capacity": 4.0, "minCapacity": 0.01, "erode": 0.3, "deposit": 0.3,
+      "evaporate": 0.012, "gravity": 4.0, "lifetime": 48, "minRelief": 25.0,
+      "thermal": { "iterations": 60, "rockTalusDeg": 48, "sedimentTalusDeg": 33, "rate": 0.25 }
+    },
+    "water": { "enabled": true, "material": "water", "minDepth": 0.2, "minArea": 4.0, "maxDepth": 1.2, "fillFraction": 0.6, "maxArea": 220.0 },
+    "detailNoise": { "wavelength": 1.6, "amplitude": 0.12, "octaves": 3, "fullSlopeDeg": 30 },
+    "surface": {
+      "base": "stone",
+      "slopeJitterDeg": 4, "jitterWavelength": 6.0, "slopeReach": 0.4,
+      "snowJitter": 2.5, "shoreBand": 0.5, "shoreReach": 0.8
+    }
+  },
+
+  "biomes": [
+    {
+      "name": "arctic", "colour": [225, 238, 245], "featureSize": 70,
+      "base": 1.0, "edgeRelief": 0.5, "erodibility": 0.3, "talusDeg": 50,
+      "layers": [
+        { "op": "damped", "wavelength": 55, "amplitude": 5, "octaves": 4, "damping": 0.5 },
+        { "op": "ridged", "wavelength": 80, "amplitude": 9, "octaves": 3, "floor": 0.05, "mask": { "wavelength": 90, "floor": 0.1 } },
+        { "op": "billow", "wavelength": 9, "amplitude": 0.5, "octaves": 2 }
+      ],
+      "palette": { "top": "snow", "under": "snow", "rock": "ice", "sand": "snow", "snow": "snow" },
+      "rules": { "soilDepth": 1.5, "grassMaxSlopeDeg": 38, "rockSlopeDeg": 50 }
+    },
+    {
+      "name": "dunes", "colour": [222, 200, 140], "featureSize": 30,
+      "base": 1.0, "edgeRelief": 0.6, "erodibility": 0.03, "talusDeg": 34,
+      "layers": [
+        { "op": "fbm", "wavelength": 80, "amplitude": 2, "octaves": 3 },
+        { "op": "dunes", "wavelength": 14, "amplitude": 2.8, "windDeg": 25, "asymmetry": 0.72,
+          "warp": { "wavelength": 40, "amplitude": 9 }, "mask": { "wavelength": 50, "floor": 0.35 } },
+        { "op": "dunes", "wavelength": 5, "amplitude": 0.35, "windDeg": 40, "asymmetry": 0.65,
+          "warp": { "wavelength": 15, "amplitude": 2 } }
+      ],
+      "palette": { "top": "sand", "under": "sand", "rock": "sandstone", "sand": "sand", "snow": "snow" },
+      "rules": { "soilDepth": 2.5, "grassMaxSlopeDeg": 50, "rockSlopeDeg": 62 }
+    },
+    {
+      "name": "canyons", "colour": [186, 110, 70], "featureSize": 80,
+      "base": 1.0, "edgeRelief": 0.3, "erodibility": 0.2, "talusDeg": 80,
+      "layers": [
+        { "op": "plateau", "wavelength": 50, "amplitude": 14, "octaves": 2, "low": 0.10, "high": 0.30,
+          "warp": { "wavelength": 70, "amplitude": 12 } },
+        { "op": "fbm", "wavelength": 25, "amplitude": 1.2, "octaves": 3 }
+      ],
+      "terrace": { "step": 3.5, "sharpness": 6 },
+      "palette": { "top": "sandstone", "under": "sandstone", "rock": "redrock", "sand": "sand", "snow": "snow" },
+      "strata": {
+        "wobble": 1.5,
+        "bands": [
+          { "material": "redrock", "thickness": 1.6 },
+          { "material": "sandstone", "thickness": 1.2 },
+          { "material": "redrock", "thickness": 2.0 },
+          { "material": "stone", "thickness": 0.8 }
+        ]
+      },
+      "rules": { "soilDepth": 0.6, "grassMaxSlopeDeg": 35, "rockSlopeDeg": 48 }
+    },
+    {
+      "name": "mountains", "colour": [130, 130, 140], "featureSize": 120,
+      "base": 5.0, "edgeRelief": 0.15, "erodibility": 1.0, "talusDeg": 50,
+      "layers": [
+        { "op": "ridged", "wavelength": 70, "amplitude": 30, "octaves": 4, "floor": 0.3,
+          "warp": { "wavelength": 60, "amplitude": 9 } },
+        { "op": "damped", "wavelength": 30, "amplitude": 5, "octaves": 5, "lacunarity": 1.98, "gain": 0.49, "damping": 0.35 }
+      ],
+      "palette": { "top": "grass", "under": "dirt", "rock": "stone", "sand": "sand", "snow": "snow" },
+      "rules": { "soilDepth": 1.0, "grassMaxSlopeDeg": 33, "rockSlopeDeg": 44, "sandDeposit": 0.4, "snowline": 22, "snowMaxSlopeDeg": 40, "snowDepth": 0.3 }
+    },
+    {
+      "name": "hills", "colour": [110, 160, 80], "featureSize": 60,
+      "base": 2.0, "edgeRelief": 0.5, "erodibility": 0.6, "talusDeg": 48,
+      "layers": [
+        { "op": "damped", "wavelength": 45, "amplitude": 9, "octaves": 5, "damping": 0.3 },
+        { "op": "billow", "wavelength": 20, "amplitude": 2.5, "octaves": 3 }
+      ],
+      "palette": { "top": "grass", "under": "dirt", "rock": "stone", "sand": "sand", "snow": "snow" },
+      "rules": { "soilDepth": 1.2, "grassMaxSlopeDeg": 35, "rockSlopeDeg": 46, "sandDeposit": 0.4 }
+    },
+    {
+      "name": "plains", "colour": [140, 190, 90],
+      "base": 0.0, "edgeRelief": 1.0, "erodibility": 0.25, "talusDeg": 45,
+      "layers": [
+        { "op": "fbm", "wavelength": 60, "amplitude": 1.5, "octaves": 3 },
+        { "op": "billow", "wavelength": 18, "amplitude": 0.4, "octaves": 2 }
+      ],
+      "palette": { "top": "grass", "under": "dirt", "rock": "stone", "sand": "sand", "snow": "snow" },
+      "rules": { "soilDepth": 1.5, "sandDeposit": 0.4 }
+    },
+    {
+      "name": "marsh", "colour": [90, 110, 70],
+      "base": -0.6, "edgeRelief": 1.0, "erodibility": 0.1, "talusDeg": 40,
+      "layers": [
+        { "op": "fbm", "wavelength": 70, "amplitude": 0.6, "octaves": 3 },
+        { "op": "billow", "wavelength": 8, "amplitude": -0.8, "octaves": 2 }
+      ],
+      "palette": { "top": "grass", "under": "mud", "rock": "stone", "sand": "mud", "snow": "snow" },
+      "rules": { "soilDepth": 1.8, "grassMaxSlopeDeg": 20, "rockSlopeDeg": 46 }
+    }
+  ]
+}

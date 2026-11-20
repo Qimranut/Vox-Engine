@@ -1,0 +1,2 @@
+# Same image as bricks.png, cooked as BC1 (4bpp) to compare against BC7 (8bpp).
+format = bc1

@@ -1,0 +1,10 @@
+{
+  "subDivisionSize": 64,
+  "editor": { "subDivisionSize": 96 },
+  "quadArenaMiB": 64,
+  "uploadBudgetMiBPerFrame": 8,
+  "ambientOcclusion": false,
+  "multiDrawIndirect": false,
+  "faceTint": { "up": 1.0, "down": 0.5, "z": 0.8, "x": 0.6 },
+  "debug": { "wireframe": false, "lodColours": false, "sectionBounds": false }
+}

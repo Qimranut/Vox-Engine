@@ -1,0 +1,5 @@
+VOXSCENE 3
+"BGM"
+ASSETS 0
+OBJECTS 1
+1 "Background Music" 1 1 1 0 0 0 0 0 0 1 1 1 "" "" 1 "audio/BGM_General.mp3" 0 0.25 1 1

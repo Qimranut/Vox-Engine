@@ -1,0 +1,1233 @@
+{
+    "entities": [
+        {
+            "cpn::CharacterBody": {
+                "airControl_": 0.30000001192092896,
+                "groundAccel_": 12.0,
+                "handle_": 4294967295,
+                "height_": 1.7999999523162842,
+                "jumpSpeed_": 5.5,
+                "maxSlopeDeg_": 50.0,
+                "playerControlled_": true,
+                "radius_": 0.30000001192092896,
+                "sprintSpeed_": 7.5,
+                "walkSpeed_": 4.5
+            },
+            "cpn::Transform": {
+                "pos_": {
+                    "x": 2.751476764678955,
+                    "y": 0.8999999761581421,
+                    "z": 4.352993488311768
+                },
+                "rot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "scale_": {
+                    "x": 0.6000000238418579,
+                    "y": 1.7999999523162842,
+                    "z": 0.6000000238418579
+                }
+            },
+            "cpn::Visibility": {
+                "visible_": true
+            },
+            "entityID": 16
+        },
+        {
+            "cpn::Collider": {
+                "halfExtents_": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                },
+                "halfHeight_": 0.5,
+                "offset_": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "radius_": 0.5,
+                "shape_": "Box"
+            },
+            "cpn::RigidBody": {
+                "allowSleeping_": true,
+                "angularDamping_": 0.05000000074505806,
+                "bodyId_": 4294967295,
+                "currPos_": {
+                    "x": 8.0,
+                    "y": 1.0,
+                    "z": 6.0
+                },
+                "currRot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "friction_": 0.5,
+                "gravityFactor_": 1.0,
+                "isSensor_": true,
+                "layer_": "Sensor",
+                "linearDamping_": 0.05000000074505806,
+                "mass_": 0.0,
+                "motion_": "Static",
+                "prevPos_": {
+                    "x": 8.0,
+                    "y": 1.0,
+                    "z": 6.0
+                },
+                "prevRot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "restitution_": 0.0
+            },
+            "cpn::Transform": {
+                "pos_": {
+                    "x": 8.0,
+                    "y": 1.0,
+                    "z": 6.0
+                },
+                "rot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "scale_": {
+                    "x": 3.0,
+                    "y": 2.0,
+                    "z": 3.0
+                }
+            },
+            "entityID": 15
+        },
+        {
+            "cpn::Collider": {
+                "halfExtents_": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                },
+                "halfHeight_": 0.5,
+                "offset_": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "radius_": 0.5,
+                "shape_": "Box"
+            },
+            "cpn::RenderMaterial": {
+                "albedo_": "textures/testtest.png"
+            },
+            "cpn::RigidBody": {
+                "allowSleeping_": true,
+                "angularDamping_": 0.05000000074505806,
+                "bodyId_": 4294967295,
+                "currPos_": {
+                    "x": 4.773552894592285,
+                    "y": 0.7430432438850403,
+                    "z": 2.9948959350585938
+                },
+                "currRot_": {
+                    "w": 0.99998939037323,
+                    "x": -3.159548896292108e-06,
+                    "y": 0.00014464800187852234,
+                    "z": 0.004620460793375969
+                },
+                "friction_": 0.5,
+                "gravityFactor_": 1.0,
+                "isSensor_": false,
+                "layer_": "Dynamic",
+                "linearDamping_": 0.05000000074505806,
+                "mass_": 0.0,
+                "motion_": "Dynamic",
+                "prevPos_": {
+                    "x": 4.773552894592285,
+                    "y": 0.7430432438850403,
+                    "z": 2.9948959350585938
+                },
+                "prevRot_": {
+                    "w": 0.99998939037323,
+                    "x": -3.159548896292108e-06,
+                    "y": 0.00014464800187852234,
+                    "z": 0.004620460793375969
+                },
+                "restitution_": 0.0
+            },
+            "cpn::Transform": {
+                "pos_": {
+                    "x": 4.773552894592285,
+                    "y": 0.7430432438850403,
+                    "z": 2.9948959350585938
+                },
+                "rot_": {
+                    "w": 0.99998939037323,
+                    "x": -3.1595491236657836e-06,
+                    "y": 0.00014464800187852234,
+                    "z": 0.004620460793375969
+                },
+                "scale_": {
+                    "x": 1.5,
+                    "y": 1.5,
+                    "z": 1.5
+                }
+            },
+            "cpn::Visibility": {
+                "visible_": true
+            },
+            "entityID": 14
+        },
+        {
+            "cpn::Collider": {
+                "halfExtents_": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                },
+                "halfHeight_": 0.5,
+                "offset_": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "radius_": 0.5,
+                "shape_": "Box"
+            },
+            "cpn::RigidBody": {
+                "allowSleeping_": true,
+                "angularDamping_": 0.05000000074505806,
+                "bodyId_": 4294967295,
+                "currPos_": {
+                    "x": -12.0,
+                    "y": 0.75,
+                    "z": -4.5
+                },
+                "currRot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "friction_": 0.5,
+                "gravityFactor_": 1.0,
+                "isSensor_": false,
+                "layer_": "Static",
+                "linearDamping_": 0.05000000074505806,
+                "mass_": 0.0,
+                "motion_": "Static",
+                "prevPos_": {
+                    "x": -12.0,
+                    "y": 0.75,
+                    "z": -4.5
+                },
+                "prevRot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "restitution_": 0.0
+            },
+            "cpn::Transform": {
+                "pos_": {
+                    "x": -12.0,
+                    "y": 0.75,
+                    "z": -4.5
+                },
+                "rot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "scale_": {
+                    "x": 3.0,
+                    "y": 1.5,
+                    "z": 0.5
+                }
+            },
+            "cpn::Visibility": {
+                "visible_": true
+            },
+            "entityID": 13
+        },
+        {
+            "cpn::Collider": {
+                "halfExtents_": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                },
+                "halfHeight_": 0.5,
+                "offset_": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "radius_": 0.5,
+                "shape_": "Box"
+            },
+            "cpn::RigidBody": {
+                "allowSleeping_": true,
+                "angularDamping_": 0.05000000074505806,
+                "bodyId_": 4294967295,
+                "currPos_": {
+                    "x": -12.0,
+                    "y": 0.625,
+                    "z": -4.0
+                },
+                "currRot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "friction_": 0.5,
+                "gravityFactor_": 1.0,
+                "isSensor_": false,
+                "layer_": "Static",
+                "linearDamping_": 0.05000000074505806,
+                "mass_": 0.0,
+                "motion_": "Static",
+                "prevPos_": {
+                    "x": -12.0,
+                    "y": 0.625,
+                    "z": -4.0
+                },
+                "prevRot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "restitution_": 0.0
+            },
+            "cpn::Transform": {
+                "pos_": {
+                    "x": -12.0,
+                    "y": 0.625,
+                    "z": -4.0
+                },
+                "rot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "scale_": {
+                    "x": 3.0,
+                    "y": 1.25,
+                    "z": 0.5
+                }
+            },
+            "cpn::Visibility": {
+                "visible_": true
+            },
+            "entityID": 12
+        },
+        {
+            "cpn::Collider": {
+                "halfExtents_": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                },
+                "halfHeight_": 0.5,
+                "offset_": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "radius_": 0.5,
+                "shape_": "Box"
+            },
+            "cpn::RigidBody": {
+                "allowSleeping_": true,
+                "angularDamping_": 0.05000000074505806,
+                "bodyId_": 4294967295,
+                "currPos_": {
+                    "x": -12.0,
+                    "y": 0.5,
+                    "z": -3.5
+                },
+                "currRot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "friction_": 0.5,
+                "gravityFactor_": 1.0,
+                "isSensor_": false,
+                "layer_": "Static",
+                "linearDamping_": 0.05000000074505806,
+                "mass_": 0.0,
+                "motion_": "Static",
+                "prevPos_": {
+                    "x": -12.0,
+                    "y": 0.5,
+                    "z": -3.5
+                },
+                "prevRot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "restitution_": 0.0
+            },
+            "cpn::Transform": {
+                "pos_": {
+                    "x": -12.0,
+                    "y": 0.5,
+                    "z": -3.5
+                },
+                "rot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "scale_": {
+                    "x": 3.0,
+                    "y": 1.0,
+                    "z": 0.5
+                }
+            },
+            "cpn::Visibility": {
+                "visible_": true
+            },
+            "entityID": 11
+        },
+        {
+            "cpn::Collider": {
+                "halfExtents_": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                },
+                "halfHeight_": 0.5,
+                "offset_": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "radius_": 0.5,
+                "shape_": "Box"
+            },
+            "cpn::RigidBody": {
+                "allowSleeping_": true,
+                "angularDamping_": 0.05000000074505806,
+                "bodyId_": 4294967295,
+                "currPos_": {
+                    "x": -12.0,
+                    "y": 0.375,
+                    "z": -3.0
+                },
+                "currRot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "friction_": 0.5,
+                "gravityFactor_": 1.0,
+                "isSensor_": false,
+                "layer_": "Static",
+                "linearDamping_": 0.05000000074505806,
+                "mass_": 0.0,
+                "motion_": "Static",
+                "prevPos_": {
+                    "x": -12.0,
+                    "y": 0.375,
+                    "z": -3.0
+                },
+                "prevRot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "restitution_": 0.0
+            },
+            "cpn::Transform": {
+                "pos_": {
+                    "x": -12.0,
+                    "y": 0.375,
+                    "z": -3.0
+                },
+                "rot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "scale_": {
+                    "x": 3.0,
+                    "y": 0.75,
+                    "z": 0.5
+                }
+            },
+            "cpn::Visibility": {
+                "visible_": true
+            },
+            "entityID": 10
+        },
+        {
+            "cpn::Collider": {
+                "halfExtents_": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                },
+                "halfHeight_": 0.5,
+                "offset_": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "radius_": 0.5,
+                "shape_": "Box"
+            },
+            "cpn::RigidBody": {
+                "allowSleeping_": true,
+                "angularDamping_": 0.05000000074505806,
+                "bodyId_": 4294967295,
+                "currPos_": {
+                    "x": -12.0,
+                    "y": 0.25,
+                    "z": -2.5
+                },
+                "currRot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "friction_": 0.5,
+                "gravityFactor_": 1.0,
+                "isSensor_": false,
+                "layer_": "Static",
+                "linearDamping_": 0.05000000074505806,
+                "mass_": 0.0,
+                "motion_": "Static",
+                "prevPos_": {
+                    "x": -12.0,
+                    "y": 0.25,
+                    "z": -2.5
+                },
+                "prevRot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "restitution_": 0.0
+            },
+            "cpn::Transform": {
+                "pos_": {
+                    "x": -12.0,
+                    "y": 0.25,
+                    "z": -2.5
+                },
+                "rot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "scale_": {
+                    "x": 3.0,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "cpn::Visibility": {
+                "visible_": true
+            },
+            "entityID": 9
+        },
+        {
+            "cpn::Collider": {
+                "halfExtents_": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                },
+                "halfHeight_": 0.5,
+                "offset_": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "radius_": 0.5,
+                "shape_": "Box"
+            },
+            "cpn::RigidBody": {
+                "allowSleeping_": true,
+                "angularDamping_": 0.05000000074505806,
+                "bodyId_": 4294967295,
+                "currPos_": {
+                    "x": -12.0,
+                    "y": 0.125,
+                    "z": -2.0
+                },
+                "currRot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "friction_": 0.5,
+                "gravityFactor_": 1.0,
+                "isSensor_": false,
+                "layer_": "Static",
+                "linearDamping_": 0.05000000074505806,
+                "mass_": 0.0,
+                "motion_": "Static",
+                "prevPos_": {
+                    "x": -12.0,
+                    "y": 0.125,
+                    "z": -2.0
+                },
+                "prevRot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "restitution_": 0.0
+            },
+            "cpn::Transform": {
+                "pos_": {
+                    "x": -12.0,
+                    "y": 0.125,
+                    "z": -2.0
+                },
+                "rot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "scale_": {
+                    "x": 3.0,
+                    "y": 0.25,
+                    "z": 0.5
+                }
+            },
+            "cpn::Visibility": {
+                "visible_": true
+            },
+            "entityID": 8
+        },
+        {
+            "cpn::Collider": {
+                "halfExtents_": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                },
+                "halfHeight_": 0.5,
+                "offset_": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "radius_": 0.5,
+                "shape_": "Box"
+            },
+            "cpn::RenderMaterial": {
+                "albedo_": "textures/testtest.png"
+            },
+            "cpn::RigidBody": {
+                "allowSleeping_": true,
+                "angularDamping_": 0.05000000074505806,
+                "bodyId_": 4294967295,
+                "currPos_": {
+                    "x": -6.0,
+                    "y": 0.8999999761581421,
+                    "z": 2.0
+                },
+                "currRot_": {
+                    "w": 0.9848077297210693,
+                    "x": 0.1736481785774231,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "friction_": 0.5,
+                "gravityFactor_": 1.0,
+                "isSensor_": false,
+                "layer_": "Static",
+                "linearDamping_": 0.05000000074505806,
+                "mass_": 0.0,
+                "motion_": "Static",
+                "prevPos_": {
+                    "x": -6.0,
+                    "y": 0.8999999761581421,
+                    "z": 2.0
+                },
+                "prevRot_": {
+                    "w": 0.9848077297210693,
+                    "x": 0.1736481785774231,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "restitution_": 0.0
+            },
+            "cpn::Transform": {
+                "pos_": {
+                    "x": -6.0,
+                    "y": 0.8999999761581421,
+                    "z": 2.0
+                },
+                "rot_": {
+                    "w": 0.9848077297210693,
+                    "x": 0.1736481785774231,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "scale_": {
+                    "x": 3.0,
+                    "y": 0.20000000298023224,
+                    "z": 6.0
+                }
+            },
+            "cpn::Visibility": {
+                "visible_": true
+            },
+            "entityID": 7
+        },
+        {
+            "cpn::Collider": {
+                "halfExtents_": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                },
+                "halfHeight_": 0.5,
+                "offset_": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "radius_": 0.5,
+                "shape_": "Box"
+            },
+            "cpn::RenderMaterial": {
+                "albedo_": "textures/compression/bricks.png"
+            },
+            "cpn::RigidBody": {
+                "allowSleeping_": true,
+                "angularDamping_": 0.05000000074505806,
+                "bodyId_": 4294967295,
+                "currPos_": {
+                    "x": 3.2934861183166504,
+                    "y": 0.7434912919998169,
+                    "z": 2.9961276054382324
+                },
+                "currRot_": {
+                    "w": 0.9999889731407166,
+                    "x": 0.000848752330057323,
+                    "y": 0.0001480442879255861,
+                    "z": 0.004623266402631998
+                },
+                "friction_": 0.5,
+                "gravityFactor_": 1.0,
+                "isSensor_": false,
+                "layer_": "Dynamic",
+                "linearDamping_": 0.05000000074505806,
+                "mass_": 0.0,
+                "motion_": "Dynamic",
+                "prevPos_": {
+                    "x": 3.2934861183166504,
+                    "y": 0.7434912919998169,
+                    "z": 2.9961276054382324
+                },
+                "prevRot_": {
+                    "w": 0.9999889731407166,
+                    "x": 0.000848752330057323,
+                    "y": 0.0001480442879255861,
+                    "z": 0.004623266402631998
+                },
+                "restitution_": 0.0
+            },
+            "cpn::Transform": {
+                "pos_": {
+                    "x": 3.2934861183166504,
+                    "y": 0.7434912919998169,
+                    "z": 2.9961276054382324
+                },
+                "rot_": {
+                    "w": 0.9999890327453613,
+                    "x": 0.000848752330057323,
+                    "y": 0.0001480442879255861,
+                    "z": 0.004623266868293285
+                },
+                "scale_": {
+                    "x": 1.5,
+                    "y": 1.5,
+                    "z": 1.5
+                }
+            },
+            "cpn::Visibility": {
+                "visible_": true
+            },
+            "entityID": 6
+        },
+        {
+            "cpn::Collider": {
+                "halfExtents_": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                },
+                "halfHeight_": 0.5,
+                "offset_": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "radius_": 0.5,
+                "shape_": "Box"
+            },
+            "cpn::RigidBody": {
+                "allowSleeping_": true,
+                "angularDamping_": 0.05000000074505806,
+                "bodyId_": 4294967295,
+                "currPos_": {
+                    "x": 2.1666533946990967,
+                    "y": 0.39607706665992737,
+                    "z": 3.00042724609375
+                },
+                "currRot_": {
+                    "w": 0.9999848008155823,
+                    "x": -0.0029996102675795555,
+                    "y": 0.00013029584079049528,
+                    "z": 0.0046236515045166016
+                },
+                "friction_": 0.5,
+                "gravityFactor_": 1.0,
+                "isSensor_": false,
+                "layer_": "Dynamic",
+                "linearDamping_": 0.05000000074505806,
+                "mass_": 0.0,
+                "motion_": "Dynamic",
+                "prevPos_": {
+                    "x": 2.1666533946990967,
+                    "y": 0.39607706665992737,
+                    "z": 3.00042724609375
+                },
+                "prevRot_": {
+                    "w": 0.9999848008155823,
+                    "x": -0.0029996102675795555,
+                    "y": 0.00013029584079049528,
+                    "z": 0.0046236515045166016
+                },
+                "restitution_": 0.0
+            },
+            "cpn::Transform": {
+                "pos_": {
+                    "x": 2.1666533946990967,
+                    "y": 0.39607709646224976,
+                    "z": 3.00042724609375
+                },
+                "rot_": {
+                    "w": 0.999984860420227,
+                    "x": -0.0029996102675795555,
+                    "y": 0.00013029584079049528,
+                    "z": 0.0046236515045166016
+                },
+                "scale_": {
+                    "x": 0.800000011920929,
+                    "y": 0.800000011920929,
+                    "z": 0.800000011920929
+                }
+            },
+            "cpn::Visibility": {
+                "visible_": true
+            },
+            "entityID": 5
+        },
+        {
+            "cpn::Collider": {
+                "halfExtents_": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                },
+                "halfHeight_": 0.5,
+                "offset_": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "radius_": 0.5,
+                "shape_": "Box"
+            },
+            "cpn::RigidBody": {
+                "allowSleeping_": true,
+                "angularDamping_": 0.05000000074505806,
+                "bodyId_": 4294967295,
+                "currPos_": {
+                    "x": 0.9999992847442627,
+                    "y": 0.39999955892562866,
+                    "z": 3.0000014305114746
+                },
+                "currRot_": {
+                    "w": 1.0,
+                    "x": 5.024597271585662e-07,
+                    "y": 1.6163378144598561e-13,
+                    "z": 9.330602779300534e-08
+                },
+                "friction_": 0.5,
+                "gravityFactor_": 1.0,
+                "isSensor_": false,
+                "layer_": "Dynamic",
+                "linearDamping_": 0.05000000074505806,
+                "mass_": 0.0,
+                "motion_": "Dynamic",
+                "prevPos_": {
+                    "x": 0.9999992847442627,
+                    "y": 0.39999955892562866,
+                    "z": 3.0000014305114746
+                },
+                "prevRot_": {
+                    "w": 1.0,
+                    "x": 5.024597271585662e-07,
+                    "y": 1.6163378144598561e-13,
+                    "z": 9.330602779300534e-08
+                },
+                "restitution_": 0.0
+            },
+            "cpn::Transform": {
+                "pos_": {
+                    "x": 0.9999992847442627,
+                    "y": 0.39999955892562866,
+                    "z": 3.0000014305114746
+                },
+                "rot_": {
+                    "w": 1.0,
+                    "x": 5.024597840019851e-07,
+                    "y": 1.6163378144598561e-13,
+                    "z": 9.330602779300534e-08
+                },
+                "scale_": {
+                    "x": 0.800000011920929,
+                    "y": 0.800000011920929,
+                    "z": 0.800000011920929
+                }
+            },
+            "cpn::Visibility": {
+                "visible_": true
+            },
+            "entityID": 1048580
+        },
+        {
+            "cpn::Collider": {
+                "halfExtents_": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                },
+                "halfHeight_": 0.5,
+                "offset_": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "radius_": 0.5,
+                "shape_": "Box"
+            },
+            "cpn::RigidBody": {
+                "allowSleeping_": true,
+                "angularDamping_": 0.05000000074505806,
+                "bodyId_": 4294967295,
+                "currPos_": {
+                    "x": -0.5000008344650269,
+                    "y": 0.39999955892562866,
+                    "z": 3.0000016689300537
+                },
+                "currRot_": {
+                    "w": 1.0,
+                    "x": 5.026506073591008e-07,
+                    "y": 1.6155368601049325e-13,
+                    "z": 9.347189688924118e-08
+                },
+                "friction_": 0.5,
+                "gravityFactor_": 1.0,
+                "isSensor_": false,
+                "layer_": "Dynamic",
+                "linearDamping_": 0.05000000074505806,
+                "mass_": 0.0,
+                "motion_": "Dynamic",
+                "prevPos_": {
+                    "x": -0.5000008344650269,
+                    "y": 0.39999955892562866,
+                    "z": 3.0000016689300537
+                },
+                "prevRot_": {
+                    "w": 1.0,
+                    "x": 5.026506073591008e-07,
+                    "y": 1.6155368601049325e-13,
+                    "z": 9.347189688924118e-08
+                },
+                "restitution_": 0.0
+            },
+            "cpn::Transform": {
+                "pos_": {
+                    "x": -0.5000008344650269,
+                    "y": 0.39999955892562866,
+                    "z": 3.000001907348633
+                },
+                "rot_": {
+                    "w": 1.0,
+                    "x": 5.026506073591008e-07,
+                    "y": 1.6155368601049325e-13,
+                    "z": 9.347189688924118e-08
+                },
+                "scale_": {
+                    "x": 0.800000011920929,
+                    "y": 0.800000011920929,
+                    "z": 0.800000011920929
+                }
+            },
+            "cpn::Visibility": {
+                "visible_": true
+            },
+            "entityID": 1048576
+        },
+        {
+            "cpn::Collider": {
+                "halfExtents_": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                },
+                "halfHeight_": 0.5,
+                "offset_": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "radius_": 0.5,
+                "shape_": "Box"
+            },
+            "cpn::RigidBody": {
+                "allowSleeping_": true,
+                "angularDamping_": 0.05000000074505806,
+                "bodyId_": 4294967295,
+                "currPos_": {
+                    "x": -2.0000009536743164,
+                    "y": 0.39999955892562866,
+                    "z": 3.0000014305114746
+                },
+                "currRot_": {
+                    "w": 1.0,
+                    "x": 5.026541316510702e-07,
+                    "y": 1.6162201785241415e-13,
+                    "z": 9.340919859823771e-08
+                },
+                "friction_": 0.5,
+                "gravityFactor_": 1.0,
+                "isSensor_": false,
+                "layer_": "Dynamic",
+                "linearDamping_": 0.05000000074505806,
+                "mass_": 0.0,
+                "motion_": "Dynamic",
+                "prevPos_": {
+                    "x": -2.0000009536743164,
+                    "y": 0.39999955892562866,
+                    "z": 3.0000014305114746
+                },
+                "prevRot_": {
+                    "w": 1.0,
+                    "x": 5.026541316510702e-07,
+                    "y": 1.6162201785241415e-13,
+                    "z": 9.340919859823771e-08
+                },
+                "restitution_": 0.0
+            },
+            "cpn::Transform": {
+                "pos_": {
+                    "x": -2.0000009536743164,
+                    "y": 0.39999955892562866,
+                    "z": 3.0000014305114746
+                },
+                "rot_": {
+                    "w": 1.0,
+                    "x": 5.026541884944891e-07,
+                    "y": 1.6162201785241415e-13,
+                    "z": 9.340919859823771e-08
+                },
+                "scale_": {
+                    "x": 0.800000011920929,
+                    "y": 0.800000011920929,
+                    "z": 0.800000011920929
+                }
+            },
+            "cpn::Visibility": {
+                "visible_": true
+            },
+            "entityID": 1048577
+        },
+        {
+            "cpn::Collider": {
+                "halfExtents_": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                },
+                "halfHeight_": 0.5,
+                "offset_": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "radius_": 0.5,
+                "shape_": "Box"
+            },
+            "cpn::RenderMaterial": {
+                "albedo_": "textures/testtest.png"
+            },
+            "cpn::RigidBody": {
+                "allowSleeping_": true,
+                "angularDamping_": 0.05000000074505806,
+                "bodyId_": 4294967295,
+                "currPos_": {
+                    "x": 0.0,
+                    "y": 2.0,
+                    "z": -8.0
+                },
+                "currRot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "friction_": 0.5,
+                "gravityFactor_": 1.0,
+                "isSensor_": false,
+                "layer_": "Static",
+                "linearDamping_": 0.05000000074505806,
+                "mass_": 0.0,
+                "motion_": "Static",
+                "prevPos_": {
+                    "x": 0.0,
+                    "y": 2.0,
+                    "z": -8.0
+                },
+                "prevRot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "restitution_": 0.0
+            },
+            "cpn::Transform": {
+                "pos_": {
+                    "x": 0.0,
+                    "y": 2.0,
+                    "z": -8.0
+                },
+                "rot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "scale_": {
+                    "x": 12.0,
+                    "y": 4.0,
+                    "z": 0.5
+                }
+            },
+            "cpn::Visibility": {
+                "visible_": true
+            },
+            "entityID": 1048578
+        },
+        {
+            "cpn::Collider": {
+                "halfExtents_": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                },
+                "halfHeight_": 0.5,
+                "offset_": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "radius_": 0.5,
+                "shape_": "Box"
+            },
+            "cpn::RigidBody": {
+                "allowSleeping_": true,
+                "angularDamping_": 0.05000000074505806,
+                "bodyId_": 4294967295,
+                "currPos_": {
+                    "x": 0.0,
+                    "y": -0.5,
+                    "z": 0.0
+                },
+                "currRot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "friction_": 0.5,
+                "gravityFactor_": 1.0,
+                "isSensor_": false,
+                "layer_": "Static",
+                "linearDamping_": 0.05000000074505806,
+                "mass_": 0.0,
+                "motion_": "Static",
+                "prevPos_": {
+                    "x": 0.0,
+                    "y": -0.5,
+                    "z": 0.0
+                },
+                "prevRot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "restitution_": 0.0
+            },
+            "cpn::Transform": {
+                "pos_": {
+                    "x": 0.0,
+                    "y": -0.5,
+                    "z": 0.0
+                },
+                "rot_": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "scale_": {
+                    "x": 60.0,
+                    "y": 1.0,
+                    "z": 60.0
+                }
+            },
+            "cpn::Visibility": {
+                "visible_": true
+            },
+            "entityID": 1048579
+        }
+    ]
+}

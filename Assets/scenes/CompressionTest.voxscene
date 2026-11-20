@@ -1,0 +1,10 @@
+VOXSCENE 1
+"Compression Test"
+ASSETS 0
+OBJECTS 6
+1 "BC7 albedo (bricks.png)" 1 -7.5 1 0 0 30 0 2 2 2 "" "textures/compression/bricks.png"
+2 "BC1 albedo (bricks_bc1.png)" 1 -4.5 1 0 0 30 0 2 2 2 "" "textures/compression/bricks_bc1.png"
+3 "BC4 mask, grey via swizzle (gradient_mask.png)" 1 -1.5 1 0 0 30 0 2 2 2 "" "textures/compression/gradient_mask.png"
+4 "BC5 normal, shows raw X,Y as red/green (bumps_n.png)" 1 1.5 1 0 0 30 0 2 2 2 "" "textures/compression/bumps_n.png"
+5 "BC6H HDR, clamped by the LDR shader (sky.hdr)" 1 4.5 1 0 0 30 0 2 2 2 "" "textures/compression/sky.hdr"
+6 "BC7 orientation check (uv_test.tga)" 1 7.5 1 0 0 30 0 2 2 2 "" "textures/uv_test.tga"
