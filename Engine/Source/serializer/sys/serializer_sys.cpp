@@ -317,6 +317,9 @@ namespace serializer
 			entt::meta_type type = entt::resolve(storage.info());
 			if (!type)
 			{
+				// TEMP DEBUG
+				std::cerr << "Unreflected pool: " << storage.info().name()
+					<< " (hash " << storage.info().hash() << ")\n";
 				throw std::runtime_error("Entity component has not been reflected, but entity is currently being serialized.");
 			}
 

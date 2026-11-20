@@ -23,7 +23,6 @@
 	F(Type, isSensor_)									\
 	F(Type, allowSleeping_)								\
 	F(Type, bodyId_)									\
-	F(Type, allowSleeping_)								\
 	F(Type, prevPos_)									\
 	F(Type, currPos_)									\
 	F(Type, prevRot_)									\
@@ -34,7 +33,7 @@
 	F(Type, halfExtents_)								\
 	F(Type, radius_)									\
 	F(Type, halfHeight_)								\
-	F(Type, offset_)									\
+	F(Type, offset_)
 
 #define RENDER_MAT_FIELDS(Type, F)						\
 	F(Type, albedo_)
@@ -61,7 +60,21 @@
 #define VOXEL_WORLD_FIELDS(Type, F)						\
 	F(Type, map_)
 
+#define TEXT_FIELDS(Type, F)							\
+	F(Type, font)										\
+	F(Type, content)									\
+	F(Type, screenSpace)								\
+	F(Type, size)										\
+	F(Type, screenPosition)								\
+	F(Type, color)										\
+	F(Type, alignment)
+
 // Custom data type Fields
+
+// GLM VEC2
+#define GLM_VEC2_FIELD(Type, F)    \
+	F(Type, x)                     \
+	F(Type, y)
 
 // GLM VEC3
 #define GLM_VEC3_FIELD(Type, F)							\

@@ -9,6 +9,7 @@
 #include "../component_types/audio_source.hpp"
 #include "../component_types/render_material.hpp"
 #include "../component_types/voxel_world.hpp"
+#include "../component_types/text.hpp"
 
 // Field list
 #include "comp_field_list.hpp"
@@ -16,6 +17,7 @@
 
 #define COMPONENT_LIST(X)									\
 	X(cpn::Transform, TRANSFORM_FIELDS)						\
+	X(cpn::Text, TEXT_FIELDS)								\
 	X(cpn::Visibility, VISIBILITY_FIELDS)					\
 	X(cpn::RigidBody, RIGIDBODY_FIELDS)						\
 	X(cpn::Collider, COLLIDER_FIELDS)						\
